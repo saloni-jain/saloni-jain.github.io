@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -24,10 +23,47 @@
     <!-- Custom styles for this template -->
     <link href="site.css" rel="stylesheet">
 
+    <!-- Bootstrap, Jquery, Popper JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="typed.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var typed = new Typed('#typed', {
+                strings: ['Hello, World! ^2000', 'I am a self-directed and a motivated software engineer with 4+ years of work experience and a proven knowledge of programming, problem solving and working effectively in dynamic environments.'],
+                typeSpeed: 10,
+                backSpeed: 20,
+                loop: false,
+                contentType: 'html'
+            });
+
+            window.sr = ScrollReveal({ reset: true });
+
+            // Custom Settings
+
+            var slideLeft = {
+                duration: 2000
+            };
+
+            var slideRight = {
+                duration: 2000,
+                delay: 500
+            };
+
+            sr.reveal('.flowleft', slideLeft);
+
+            sr.reveal('.flowright', slideRight);
+        })
+    </script>
 </head>
 
 <body id="page-top">
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
             <span class="d-block d-lg-none">Saloni Jain</span>
@@ -40,29 +76,29 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item hvr-wobble-horizontal">
                     <a class="nav-link js-scroll-trigger" href="#about">About</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item hvr-wobble-horizontal">
                     <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item hvr-wobble-horizontal">
                     <a class="nav-link js-scroll-trigger" href="#education">Education</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item hvr-wobble-horizontal">
                     <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+                <li class="nav-item hvr-wobble-horizontal">
+                    <a class="nav-link js-scroll-trigger" href="#portfolio">Interests</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item hvr-wobble-horizontal">
                     <a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="container-fluid p-0">
+    <div class="container p-0 col-12">
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
             <div class="w-100">
                 <h1 class="mb-0">
@@ -73,15 +109,15 @@
                     910 Deerfield Crossing Dr, Apt 2101 · Alpharetta, GA 30004 · (404) 285-6129 ·
                     <!--<a href="mailto:salonij97@gmail.com">salonij97@gmail.com</a>-->
                 </div>
-                <p class="lead mb-5">Self-directed and motivated Software Engineer with 4+ years of experience and a proven knowledge of programming, problem solving and working effectively in dynamic environments. ML enthusiast.</p>
-                <div class="social-icons">
-                    <a href="mailto:salonij97@gmail.com">
+                <span id="typed" class="mb-5 lead typed"></span>
+                <div class="social-icons mt-5">
+                    <a href="mailto:salonij97@gmail.com" class="hvr-grow">
                         <i class="fa fa-envelope"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/saloni-jain-3784b236/">
+                    <a href="https://www.linkedin.com/in/saloni-jain-3784b236/" class="hvr-grow">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/salonijain">
+                    <a href="https://github.com/salonijain" class="hvr-grow">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
@@ -93,79 +129,119 @@
         <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
             <div class="w-100">
                 <h2 class="mb-5">Experience</h2>
-
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Software Engineer</h3>
-                        <div class="subheading mb-3">LexisNexis Risk Solutions</div>
-                        <p>Led the entity development initiative serving Insurance, Business Services and Government verticals as a SME and primary point-of-contact for the modelling organization. Introduced and implemented best practices to software development.</p>
+                <div class="row col-12">
+                    <div class="col-6">
+                        <div class="card compact mb-5 flowleft">
+                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                <h4 class="mb-0">Software Engineer</h4>
+                                <h5 class="mb-1 text-white">LexisNexis Risk Solutions</h5>
+                            </div>
+                            <div class="card-body bg-white ">
+                                <div class="container-fluid">
+                                    <p>Led the entity development initiative serving Insurance, Business Services and Government verticals as a SME and primary point-of-contact for the modelling organization. Introduced and implemented best practices to software development.</p>
+                                </div>
+                            </div>
+                            <div class="resume-date card-footer">
+                                <span class="text-primary">Alpharetta, GA</span> <br />
+                                <span class="text-primary">September 2016 - Present</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Alpharetta, GA</span> <br />
-                        <span class="text-primary">September 2016 - Present</span>
+
+                    <div class="col-6">
+                        <div class="card compact mb-5 flowright">
+                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                <h4 class="mb-0">Software Developer</h4>
+                                <h5 class="mb-1 text-white">Comet Global Consulting</h5>
+                            </div>
+                            <div class="card-body bg-white ">
+                                <div class="container-fluid">
+                                    <p>Developed end-to-end application for their customer service journey utilizing jQuery plugins, JSON, AngularJS, JavaScript and Bootstrap. Took over the role of the lead developer, in a span of few months, and met project deadlines in a fast-paced environment.</p>
+                                </div>
+                            </div>
+                            <div class="resume-date card-footer">
+                                <span class="text-primary">Alpharetta, GA</span> <br />
+                                <span class="text-primary">June 2015 - September 2016</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Software Developer</h3>
-                        <div class="subheading mb-3">Comet Global Consulting</div>
-                        <p>Developed end-to-end application for their customer service journey utilizing jQuery plugins, JSON, AngularJS, JavaScript and Bootstrap. Took over the role of the lead developer, in a span of few months, and met project deadlines in a fast-paced environment.</p>
+                <div class="row col-12">
+                    <div class="col-6">
+                        <div class="card compact mb-5 flowleft">
+                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                <h4 class="mb-0">Programming Intern</h4>
+                                <h5 class="mb-1 text-white">Moda Operandi</h5>
+                            </div>
+                            <div class="card-body bg-white ">
+                                <div class="container-fluid">
+                                    <p>Developed a content management system for the company’s administrative website using Ruby on Rails and RSpec. Also performed server-end code testing and bug fixing for the website and tracked changes using GitHub.</p>
+                                </div>
+                            </div>
+                            <div class="resume-date card-footer">
+                                <span class="text-primary">New York City, NY</span> <br />
+                                <span class="text-primary">May 2014 - July 2014</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Alpharetta, GA</span> <br />
-                        <span class="text-primary">June 2015 - September 2016</span>
+
+                    <div class="col-6">
+                        <div class="card compact mb-5 flowright">
+                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                <h4 class="mb-0">Research Intern</h4>
+                                <h5 class="mb-1 text-white">Infosys</h5>
+                            </div>
+                            <div class="card-body bg-white ">
+                                <div class="container-fluid">
+                                    <p>Was responsible for research of Customer Care Concerpts for ICare Product Suite. Analyzed various customer care products in order to establish a benchmark and created comparison reports to identify missing components in the ICare Suite and filed a patent for Intellectual Property for the research work done.</p>
+                                </div>
+                            </div>
+                            <div class="resume-date card-footer">
+                                <span class="text-primary">Pune, India</span> <br />
+                                <span class="text-primary">May 2012 – July 2012</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Programming Intern</h3>
-                        <div class="subheading mb-3">Moda Operandi</div>
-                        <p>Developed a content management system for the company’s administrative website using Ruby on Rails and RSpec. Also performed server-end code testing and bug fixing for the website and tracked changes using GitHub.</p>
+                <div class="row col-12">
+                    <div class="col-6">
+                        <div class="card compact mb-5 flowleft">
+                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                <h4 class="mb-0">Programming Intern</h4>
+                                <h5 class="mb-1 text-white">National Centre for Agricultural Economics and Policy Research (NCAP)</h5>
+                            </div>
+                            <div class="card-body bg-white ">
+                                <div class="container-fluid">
+                                    <p>Developed modules for website using ASP.Net in Visual Studio for insertion and display of contents in a data warehouse.</p>
+                                </div>
+                            </div>
+                            <div class="resume-date card-footer">
+                                <span class="text-primary">Delhi, India</span> <br />
+                                <span class="text-primary">May 2011 – June 2011</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">New York City, NY</span> <br />
-                        <span class="text-primary">May 2014 - July 2014</span>
+
+                    <div class="col-6">
+                        <div class="card compact mb-5 flowright">
+                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                <h4 class="mb-0">Programming Intern</h4>
+                                <h5 class="mb-1 text-white">Indraprastha Institute of Information Technology (IIIT-Delhi)</h5>
+                            </div>
+                            <div class="card-body bg-white ">
+                                <div class="container-fluid">
+                                    <p>Developed a working mobile application that used geolocations to predict cab fares using Python, Google Maps API, Wikimapia and MySQL. The system learned from the actual fares collected and integrated it with the existing model to improve the accuracy.</p>
+                                </div>
+                            </div>
+                            <div class="resume-date card-footer">
+                                <span class="text-primary">Delhi, India</span> <br />
+                                <span class="text-primary">May 2010 – June 2010</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Research Intern</h3>
-                        <div class="subheading mb-3">Infosys</div>
-                        <p>Was responsible for research of Customer Care Concerpts for ICare Product Suite. Analyzed various customer care products in order to establish a benchmark and created comparison reports to identify missing components in the ICare Suite and filed a patent for Intellectual Property for the research work done.</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Pune, India</span> <br />
-                        <span class="text-primary">May 2012 – July 2012</span>
-                    </div>
-                </div>
-
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Programming Intern</h3>
-                        <div class="subheading mb-3">National Centre for Agricultural Economics and Policy Research (NCAP)</div>
-                        <p>Developed modules for website using ASP.Net in Visual Studio for insertion and display of contents in a data warehouse.</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Delhi, India</span> <br />
-                        <span class="text-primary">May 2011 – June 2011</span>
-                    </div>
-                </div>
-
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Programming Intern</h3>
-                        <div class="subheading mb-3">Indraprastha Institute of Information Technology (IIIT-Delhi)</div>
-                        <p>Developed a working mobile application that used geolocations to predict cab fares using Python, Google Maps API, Wikimapia and MySQL. The system learned from the actual fares collected and integrated it with the existing model to improve the accuracy.</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Delhi, India</span> <br />
-                        <span class="text-primary">May 2010 – June 2010</span>
-                    </div>
-                </div>
-
             </div>
 
         </section>
@@ -177,29 +253,42 @@
 
                 <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="resume-content">
-                        <h3 class="mb-0">Georgia State University</h3>
-                        <div class="subheading mb-2">Masters of Science</div>
-                        <div class="h5">Computer Science</div>
-                        <div class="mb-1"><strong>Thesis:</strong> Real-Time Social Network Data Mining for Predicting the Path for a Disaster under the advisement of Dr. Yanqing Zhang. It proposed a framework where twitter users act as sensors to provide useful information for path prediction.</div>
-                        <p>GPA: 3.96/4.0</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">August 2013 - May 2015</span>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6  education-item">
+                                <a class="education-link" data-toggle="modal" href="#educationModal1">
+                                    <div class="education-hover">
+                                        <div class="education-hover-content">
+                                            <i class="fas fa-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img class="img-fluid" src="gsu.JPG" alt="">
+                                </a>
+                                <br />
+                                <div class="mb-5 text-center">
+                                    <h4 class="mb-1">Georgia State University</h4>
+                                    <p class="text-sucess mb-1">Atlanta, GA</p>
+                                    <p class="text-sucess h5">Masters of Science, Computer Science</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 education-item">
+                                <a class="education-link" data-toggle="modal" href="#educationModal2">
+                                    <div class="education-hover">
+                                        <div class="education-hover-content">
+                                            <i class="fas fa-plus fa-3x"></i>
+                                        </div>
+                                    </div>
+                                    <img class="img-fluid" src="Iiitdelhi-building.jpg" alt="">
+                                </a>
+                                <br />
+                                <div class="mb-5 text-center">
+                                    <h4>Indraprastha Institute of Information Technology</h4>
+                                    <p class="text-sucess mb-1">Delhi, India</p>
+                                    <p class="text-sucess h5">Bachelor of Technology, Computer Science</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-                    <div class="resume-content">
-                        <h3 class="mb-0">Indraprastha Institute of Information Technology</h3>
-                        <div class="subheading mb-2">Bachelor of Technology</div>
-                        <div class="h5 mb-1">Computer Science</div>
-                        <p>GPA: 7.81/10.0</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">July 2009 - May 2013</span>
-                    </div>
-                </div>
-
             </div>
         </section>
 
@@ -212,35 +301,42 @@
                     <div class="offset-1">
                         <div class="subheading mb-3">Programming Languages</div>
                         <ul class="fa-ul mb-0">
-                            <li>
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 Big Data Framework – HPCC
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 KEL
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 ECL
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 Java
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 Python
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 JavaScript, HTML5, CSS3
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 String Template, PlantUML
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 SQL
                             </li>
@@ -249,35 +345,42 @@
                     <div class="offset-1">
                         <div class="subheading mb-3">Tools</div>
                         <ul class="fa-ul mb-0">
-                            <li>
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 IntelliJ
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 Python IDLE
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 Visio
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 JIRA, Confluence
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 Weka
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 GitHub, GitLab
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 ECL IDE
                             </li>
-                            <li>
+                            <br />
+                            <li class="hvr-grow2">
                                 <i class="fa-li fa fa-check"></i>
                                 Visual Studio
                             </li>
@@ -289,11 +392,56 @@
 
         <hr class="m-0">
 
-        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
+        <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="portfolio">
             <div class="w-100">
                 <h2 class="mb-5">Interests</h2>
-                <p>Apart from being a software developer, I like to indulge myself in sports and outdoor activities. I've been playing table tennis for almost 10 years now along with some tennis and badminton. Since the weather here in Gerogia is fairly good for the most part of the year, I enjoy bicycling, swimming and walking my cats.</p>
-                <p class="mb-0">I'm highly passionate about animal welfare and environmental sustainability and I spend a large chunk of my free time reading and exploring about some of these pressing global issues. I've recently started volunteering at Atlanta Humane Society and also an active member of Anonymous for the Voiceless: Atlanta Chapter.</p>
+                <div class="row no-gutters">
+                    <div class="col-lg-6">
+                        <a class="portfolio-item">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>Sports</h2>
+                                    <p class="mb-0 portfolio-text">I love to indulge myself in sports and outdoor activities. I've been playing table tennis for almost 10 years now along with some tennis and badminton.</p>
+                                </span>
+                            </span>
+                            <img class="img-fluid" src="tt.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2 class="subheading">Outdoors</h2>
+                                    <p class="mb-0 portfolio-text">Since the weather here in Gerogia is fairly good for the most part of the year, I enjoy bicycling, swimming and some leisure walks.</p>
+                                </span>
+                            </span>
+                            <img class="img-fluid" src="cycle.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>Pets</h2>
+                                    <p class="mb-0 portfolio-text">I have two of the sweetest cats with whom I love to spend as much time as I can. Having them around instantly cheers me up.</p>
+                                </span>
+                            </span>
+                            <img class="img-fluid" src="cat1.jpg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <a class="portfolio-item">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>Cruelty Free World</h2>
+                                    <p class="mb-0 portfolio-text">I'm highly passionate about animal welfare and environmental sustainability and I spend a large chunk of my free time reading and exploring about some of these pressing global issues. I've recently started volunteering at <i>Atlanta Humane Society</i> and I'm also an active member of <i>Anonymous for the Voiceless: Atlanta Chapter</p>
+                                </span>
+                            </span>
+                            <img class="img-fluid" src="tree.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -302,40 +450,377 @@
         <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="certifications">
             <div class="w-100">
                 <h2 class="mb-5">Certifications</h2>
-                <ul class="fa-ul mb-0">
-                    <li class="mb-2">
+                <ul class="fa-ul mb-0 h5">
+                    <li class="mb-4">
                         <i class="fa-li fa fa-trophy trophy"></i>
                         MITx's Statistics and Data Science MicroMasters Program - Ongoing
                     </li>
-                    <li class="mb-2">
+                    <li class="mb-4">
                         <i class="fa-li fa fa-trophy trophy"></i>
                         Six Sigma Green Belt Certification - Ongoing
                     </li>
-                    <li class="mb-2">
+                    <li class="mb-4">
                         <i class="fa-li fa fa-trophy trophy"></i>
                         Certified System Architect (CSA) in Pega 7.1 - May 2016
                     </li>
-                    <li class="mb-2">
+                    <li class="mb-4">
                         <i class="fa-li fa fa-trophy trophy"></i>
                         Certified Pega Marketing Consultant (CPMC) in Pega 7.1 - July 2015
                     </li>
                 </ul>
             </div>
         </section>
-
     </div>
-
-    <!-- Bootstrap, Jquery, Popper JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-
     <!-- Custom scripts for this template -->
     <script src="site.js"></script>
 
+    <!-- Modal 1 -->
+    <div class="education-modal modal fade" id="educationModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h3 class="text-uppercase">Masters of Science, Computer Science </h3>
+                                <h4 class="text-muted">August 2013 - June 2015</h4>
+                                <h4 class="text-muted">GPA: 3.96/4.0</h4>
+
+                                <br />
+                                <p>
+                                    During my graduation I wrote a thesis titled Real-Time Social Network Data Mining for Predicting the Path for a Disaster under the advisement of Dr. Yanqing Zhang. It proposed a framework where twitter users act as sensors to provide useful information for path prediction.
+                                    <br/>Listed below are some of the other projects that I was involved in.
+                                </p>
+                                <br />
+                                <div class="row col-12">
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">Optical character recognition to convert a printed character into a machine-readable character</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Implemented SVM, Naïve Bayes, and Discriminant Bayesian algorithms in MATLAB to convert an image of a character into machine readable format, and displayed the obtained character on the screen.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">September 2014 - December 2014</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">A modeling and simulation model using DEVSJAVA for drug distribution system</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Implemented five models using DEVSJAVA to demonstrate how much delay is present between the time when a pharmacist describes a drug to a patient and the time the drug reaches the patient.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">January 2014 - May 2014</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <div class="col-6 offset-3">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">Discussion Forum</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Implemented the following features using JSP, HTML, CSS, Ajax, Javascript, MySQL – registration, selecting classes, login, displaying, and adding/deleting classes, adding comments as a user or as anonymous, and logout.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">September 2013 - December 2013</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="education-modal modal fade" id="educationModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 mx-auto">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h3 class="text-uppercase">Bachelor of Technology, Computer Science </h3>
+                                <h4 class="text-muted">August 2009 - May 2013</h4>
+                                <h4 class="text-muted">GPA: 7.81/10.0</h4>
+
+                                <br />
+                                <p>
+                                    I took the Machine Learning stream during my undergraduation, which included courses like Image Analysis, Introduction to Machine Learning, Pattern Recognition. Given below are few of the projects that I did during my undergrad.
+                                </p>
+                                <br />
+                                <div class="row col-12">
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">Sentiment Analysis on Twitter</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Collected tweets for four companies, namely – Google, Apple, Microsoft and Twitter to analyze the sentiments on their products.
+                                                        Training was done on four classes – positive, negative, neutral and irrelevant using features like usernames, hashtags and URLs.
+                                                        Created a bag of words which was used for classification.
+                                                        Used two classifiers – SVN and Naïve Bayes in MATLAB.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">August 2012 - December 2012</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">Spam Detection on Twitter</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Used the Fabricio dataset for spam detection.
+                                                        Extracted features like keywords, number of usernames, number of hashtags, length of the tweet, etc.
+                                                        Created a web interface for spam detection in Java where classification was done using LibSVM.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">August 2012 - December 2012</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">District Level Analysis of Agricultural Productivity</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Identified variables for success in districts with high productivity.
+                                                        Replicated them for areas of low productivity and analyzed the results.
+                                                        The database was analyzed using Weka and Microsoft Excel.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">Jan 2012 - May 2012</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">License Plate Recognition System</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Collected car images for training and testing.
+                                                        Developed code for localization of the number plate in the image of a car in C# using Emgu CV.
+                                                        Developed code for training and testing of printed characters for the license plate recognition in MATLAB.
+                                                        Used three classifiers, namely – SVN, Template Matching and Bayesian.
+                                                        Developed a new technique of fusion which combined SVN and Template Matching.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">August 2011 - May 2012</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">Analysis of the security Online Payment Schemes</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Analyzed the security standards of existing payment schemes like Paypal by checking them against the existing phishing sites to know the difference.
+                                                        Performed threat modeling on the system.
+                                                        Analyzed different protocols and crypto systems used by the sites.
+                                                        Implemented various encryption algorithms including RSA, AES and RC4 in Java.
+                                                        Developed a simple chrome extension to detect if the URL can be a phishing URL.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">August 2011 - December 2011</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">Find-Ur-Pal</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Created tables in a location database which contained the locations and permissions for a person in MySQL.
+                                                        Developed code for query management for users in Java.
+                                                        Developed a simple message service in Java which can be used to accept an incoming request message from a user and sends out a message with the location.
+                                                        Made an android application for the same purpose.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">August 2011 - Dec 2011</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">Movie Database</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Wrote a script to read movie information from various websites from the internet.
+                                                        Created a database containing that information in MySQL.
+                                                        Developed code in python for insertion, update and deletion of database entries.
+                                                        Analyzed the database through Entity Relationship (ER) diagrams.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">January 2011 - May 2011</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">Web Browser</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Created a web browser in Java using the URL connection.
+                                                        It included the basic functionalities like opening a URL and multiple tabs.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">January 2011 - May 2011</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">Text Classification of news articles</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Implemented Naive Bayes and KNN algorithm in Python.
+                                                        Used the database containing 20 classes of news articles.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">August 2010 - December 2010</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1">RSA Encryption Algorithm</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        Implemented the RSA encryption algorithm in C. This program took the public and private key from the users and successfully encrypted and decrypted the message.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">January 2010 - May 2010</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-12">
+                                    <div class="col-6 offset-3">
+                                        <div class="card compact mb-5">
+                                            <div class="card-header bg-secondary text-white headerColor text-uppercase">
+                                                <h5 class="mb-1 mt-1"> RightFARE</h5>
+                                            </div>
+                                            <div class="card-body bg-white ">
+                                                <div class="container-fluid">
+                                                    <p>
+                                                        RightFARE is an sms based autorickshaw fare prediction system for New Delhi. Built using Python, Google Maps API and j2ME.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="resume-date card-footer">
+                                                <span class="text-primary">January 2010 - May 2010</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                    <i class="fas fa-times"></i>
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
